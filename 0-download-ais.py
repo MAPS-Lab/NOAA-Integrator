@@ -6,7 +6,7 @@ import argparse
 # Set up command-line arguments
 parser = argparse.ArgumentParser(description="Download AIS data from NOAA.")
 parser.add_argument('--start-year', type=int, required=True, help="Start year for downloading data.")
-parser.add_argument('--end-year', type=int, required=True, help="End year for downloading data (exclusive).")
+parser.add_argument('--end-year', type=int, required=True, help="End year for downloading data (inclusive).")
 
 # Parse the command-line arguments
 args = parser.parse_args()
@@ -20,7 +20,7 @@ end_year = args.end_year
 years = range(start_year, end_year + 1)
 
 # Directory where the files will be saved
-download_dir = os.path.expanduser("/slow-array/NOAA/")
+download_dir = os.path.expanduser("/data/tmp_marinecadastre/")
 os.makedirs(download_dir, exist_ok=True)
 
 for year in years:
@@ -29,8 +29,13 @@ for year in years:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Find all links to zip files
-    links = soup.find_all('a')
-    zip_links = [link.get('href') for link in links if link.get('href').endswith('.zip')]
+    # Differentiate file extensions for 2025
+    if year == 2025:
+        links = soup.find_all('a')
+        zip_links = [link.get('href') for link in links if link.get('href').endswith('.csv.zst')]
+    else:
+        links = soup.find_all('a')
+        zip_links = [link.get('href') for link in links if link.get('href').endswith('.zip')]
 
     # Download each zip file
     for link in zip_links:
