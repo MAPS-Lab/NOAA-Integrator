@@ -1,0 +1,52 @@
+[project]
+name = "noaa-integrator"
+version = "1.0.0"
+description = "Acquisition and processing of AIS data from NOAA Marine Cadastre into an AISdb-aligned database"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"  # upper bound: aisdb ships wheels up to cp312
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "AISViz / MAPS Lab, Dalhousie University" }]
+dependencies = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "tqdm>=4.66",
+    "zstandard>=0.22",
+]
+
+[project.optional-dependencies]
+load = ["aisdb>=1.7.2"]
+gdb = ["geopandas>=0.14", "fiona>=1.9"]
+simplify = ["fastdtw>=0.3", "similaritymeasures>=1.1", "scipy>=1.11"]
+
+[project.scripts]
+noaa-integrator = "noaa_integrator.cli:main"
+
+[project.urls]
+Repository = "https://github.com/AISViz/NOAA-Integrator"
+Documentation = "https://aisviz.gitbook.io/documentation/"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/noaa_integrator"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.8", "pyrefly>=0.16"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "PTH"]
+
+[tool.pyrefly]
+project-includes = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,4 +1,23 @@
-data/
-# Ignore PyCharm project files
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
 .idea/
 *.iml
+
+# Data (pipeline output lives outside the repo)
+data/
+*.db
+*.zip
+*.zst
+
+# OS
+.DS_Store
