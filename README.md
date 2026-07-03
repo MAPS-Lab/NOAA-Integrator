@@ -1,6 +1,6 @@
 # NOAA-Integrator
 
-Acquisition and processing of AIS data from [NOAA Marine Cadastre](https://hub.marinecadastre.gov/pages/vesseltraffic), with integration into an [AISdb](https://github.com/AISViz/AISdb)-aligned database (SQLite or PostgreSQL/TimescaleDB). It consumes the NOAA archive at `https://coast.noaa.gov/htdata/CMSP/AISDataHandler/{year}/` and supports every published format, including daily ZIP archives (2015-2024), zone archives (2009-2014), legacy geodatabases (`.gdb.zip`, 2011-2013), and Zstandard-compressed CSV (`.csv.zst`, 2025 onward).
+Acquisition and processing of AIS data from [NOAA Marine Cadastre](https://hub.marinecadastre.gov/pages/vesseltraffic), with integration into an [AISdb](https://github.com/MAPS-Lab/AISdb)-aligned database (SQLite or PostgreSQL/TimescaleDB). It consumes the NOAA archive at `https://coast.noaa.gov/htdata/CMSP/AISDataHandler/{year}/` and supports every published format, including daily ZIP archives (2015-2024), zone archives (2009-2014), legacy geodatabases (`.gdb.zip`, 2011-2013), and Zstandard-compressed CSV (`.csv.zst`, 2025 onward).
 
 ## Features
 
@@ -129,9 +129,9 @@ Continuous integration runs linting, type checking, and the test suite on Ubuntu
 
 ## Related projects
 
-- [AISdb](https://github.com/AISViz/AISdb), the core Python/Rust platform for storing, querying, and analyzing AIS data
-- [AISdb-lite](https://github.com/AISViz/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
-- [Tutorials](https://github.com/AISViz/Tutorials), hands-on notebook companions to the GitBook tutorials
+- [AISdb](https://github.com/MAPS-Lab/AISdb), the core Python/Rust platform for storing, querying, and analyzing AIS data
+- [AISdb-lite](https://github.com/MAPS-Lab/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
+- [Tutorials](https://github.com/MAPS-Lab/AISdb-Tutorials), hands-on notebook companions to the GitBook tutorials
 
 ## License
 
