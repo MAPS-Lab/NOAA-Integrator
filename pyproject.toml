@@ -24,7 +24,7 @@ simplify = ["fastdtw>=0.3", "similaritymeasures>=1.1", "scipy>=1.11"]
 noaa-integrator = "noaa_integrator.cli:main"
 
 [project.urls]
-Repository = "https://github.com/MAPS-Lab/AISdb-NOAA-Integrator"
+Repository = "https://github.com/MAPS-Lab/NOAA-Integrator"
 Documentation = "https://aisviz.gitbook.io/documentation/"
 
 [build-system]
