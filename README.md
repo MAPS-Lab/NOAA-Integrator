@@ -145,6 +145,22 @@ Continuous integration runs linting, type checking, and the test suite on Ubuntu
 - [AISdb-lite](https://github.com/MAPS-Lab/AISdb-lite), a lightweight AISdb variant built on PostGIS and TimescaleDB hypertables
 - [Tutorials](https://github.com/MAPS-Lab/AISdb-Tutorials), hands-on notebook companions to the GitBook tutorials
 
+## Citation
+
+If you use NOAA-Integrator in your work, please cite it. Citation metadata lives in [CITATION.cff](CITATION.cff), and the BibTeX entry follows.
+
+```bibtex
+@software{NOAAIntegrator2026:GSpadon,
+  author    = {Spadon, Gabriel},
+  title     = {NOAA-Integrator},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {MAPS Lab, Dalhousie University},
+  url       = {https://github.com/MAPS-Lab/NOAA-Integrator},
+  license   = {AGPL-3.0}
+}
+```
+
 ## License
 
 This project is distributed under the terms of the GNU Affero General Public License v3.0 (AGPL-3.0). See [LICENSE](LICENSE) for details.
