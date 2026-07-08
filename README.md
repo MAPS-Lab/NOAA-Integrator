@@ -137,7 +137,7 @@ Continuous integration runs linting, type checking, and the test suite on Ubuntu
 
 ## Documentation
 
-[Docs](https://aisviz.gitbook.io/documentation/) · [Tutorials](https://aisviz.gitbook.io/tutorials/) · [API reference](https://aisviz.cs.dal.ca/AISdb/) · [Website](https://aisviz.cs.dal.ca/)
+[Docs](https://aisviz.gitbook.io/documentation/) · [Tutorials](https://aisviz.gitbook.io/tutorials/) · [API reference](https://maps-lab.github.io/AISdb/) · [Website](https://aisviz.cs.dal.ca/)
 
 ## Related projects
 
